@@ -1,0 +1,351 @@
+/* Global Reset & Typography */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f7f4ed;
+    color: #3b281a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+/* Header Styling */
+#headerForHomepage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(92, 58, 33, 0.05);
+    margin-bottom: 20px;
+    border: 1px solid #e8dec8;
+}
+
+.logo-title-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#cstaLogo {
+    width: 65px;
+    height: 45px;
+    object-fit: contain;
+}
+
+#WelcomeTxt {
+    font-size: 1.4rem;
+    color: #5c3a21;
+    font-weight: 700;
+}
+
+/* Top Stats / Department Banner Styling */
+.stats-banner {
+    display: flex;
+    width: 100%;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.stat-card {
+    flex: 1;
+    padding: 20px 15px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(92, 58, 33, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 120px;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 0.75rem;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.stat-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 20px rgba(92, 58, 33, 0.2);
+}
+
+.sub-greeting {
+    font-size: 0.95rem;
+    color: #6b5344;
+    margin-bottom: 15px;
+    font-weight: 500;
+    padding-left: 5px;
+}
+
+/* Main App Layout */
+.main-container {
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    min-height: 500px;
+}
+
+/* Sidebar Navigation */
+.sidebar-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 260px;
+    flex-shrink: 0;
+}
+
+.sidebar-buttons button,
+.sidebar-buttons .nav-btn {
+    width: 100%;
+    padding: 14px 18px;
+    background-color: #ffffff;
+    color: #5c3a21;
+    border: 1px solid #e8dec8;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(92, 58, 33, 0.02);
+    transition: all 0.2s ease;
+}
+
+.sidebar-buttons button:hover {
+    background-color: #5c3a21;
+    color: #ffffff;
+    border-color: #5c3a21;
+    transform: translateX(3px);
+}
+
+/* Output Display Panel */
+.output-container {
+    flex: 1;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(92, 58, 33, 0.05);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    border: 1px solid #e8dec8;
+}
+
+.output-container h2 {
+    font-size: 1.3rem;
+    color: #5c3a21;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #f7f4ed;
+    padding-bottom: 10px;
+}
+
+#waitForUser {
+    color: #8c7362;
+    font-style: italic;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.output-container input[type="text"],
+.output-container select {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #d4c5b9;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    background: #fff;
+}
+
+.output-container input[type="text"]:focus,
+.output-container select:focus {
+    outline: none;
+    border-color: #5c3a21;
+    box-shadow: 0 0 0 3px rgba(92, 58, 33, 0.15);
+}
+
+.output-container label {
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #4a3525;
+}
+
+.output-container button {
+    padding: 10px 16px;
+    background-color: #5c3a21;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.output-container button:hover {
+    background-color: #7a4e2d;
+}
+
+.output-container ul li {
+    background: #ffffff !important;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
+/* Logout Button */
+.logout {
+    position: relative;
+    z-index: 10;
+}
+
+.logout button,
+#logoutBtn {
+    padding: 8px 16px;
+    background-color: #a34828;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    position: relative;
+    z-index: 11;
+    pointer-events: auto;
+    transition: background-color 0.2s;
+}
+
+.logout button:hover {
+    background-color: #87391e;
+}
+
+@media (max-width: 900px) {
+    .stats-banner {
+        flex-direction: column;
+    }
+
+    .main-container {
+        flex-direction: column;
+    }
+
+    .sidebar-buttons {
+        width: 100%;
+    }
+}
+
+/* Custom Message Box */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(59, 40, 26, 0.55);
+    backdrop-filter: blur(3px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-card {
+    background: #ffffff;
+    width: 90%;
+    max-width: 420px;
+    padding: 28px 28px 22px;
+    border-radius: 12px;
+    border: 1px solid #e8dec8;
+    border-top: 1px solid #e8dec8;
+    box-shadow: 0 15px 40px rgba(59, 40, 26, 0.35);
+    animation: modalPop 0.2s ease;
+}
+
+.modal-card h3 {
+    font-size: 1.15rem;
+    color: #5c3a21;
+    margin-bottom: 10px;
+}
+
+.modal-card p {
+    font-size: 0.95rem;
+    color: #3b281a;
+    line-height: 1.5;
+    white-space: pre-line;
+    /* lets \n create line breaks */
+    margin-bottom: 22px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.modal-buttons button {
+    padding: 9px 22px;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.modal-buttons button:active {
+    transform: scale(0.97);
+}
+
+#modalOkBtn {
+    background-color: #5c3a21;
+    color: #fff;
+}
+
+#modalOkBtn:hover {
+    background-color: #7a4e2d;
+}
+
+#modalCancelBtn {
+    background-color: #f0e9dc;
+    color: #5c3a21;
+}
+
+#modalCancelBtn:hover {
+    background-color: #e4d9c4;
+}
+
+.modal-card.success,
+.modal-card.error,
+.modal-card.warning,
+.modal-card.info {
+    border-top: 1px solid #e8dec8;
+}
+
+@keyframes modalPop {
+    from {
+        opacity: 0;
+        transform: scale(0.92) translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}

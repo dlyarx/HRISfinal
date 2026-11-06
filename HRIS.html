@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRIS - Login</title>
+    <link rel="stylesheet" href="HRIS.css">
+</head>
+
+<body id="body1">
+    <div class="page">
+
+        <!-- School photo with a brown tint (shows on the left side) -->
+        <div class="photo" aria-hidden="true"></div>
+
+        <!-- Curved white shape on the right, with a brown edge -->
+        <svg class="bg" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+                <linearGradient id="rightFade" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#ffffff" />
+                    <stop offset="1" stop-color="#f7f4ed" />
+                </linearGradient>
+            </defs>
+            <path class="bg-band"
+                d="M 56.4,0 C 48.4,20 40.4,35 45.4,48 C 50.4,62 42.4,80 38.4,100 L 100,100 L 100,0 Z" />
+            <path d="M 58,0 C 50,20 42,35 47,48 C 52,62 44,80 40,100 L 100,100 L 100,0 Z" fill="url(#rightFade)" />
+        </svg>
+
+        <!-- Left side: welcome panel -->
+        <section class="left">
+            <div class="brand">
+                <span class="logo-circle">
+                    <img src="assets/cstaLogo.png" alt="CSTA Logo" id="logo">
+                </span>
+                <div class="brand-text">
+                    <strong>Human Resources Information System</strong>
+                    <span>Education that Transcends</span>
+                </div>
+            </div>
+
+            <!-- Simple laptop and lock illustration -->
+            <svg class="illustration" viewBox="0 0 300 190" aria-hidden="true">
+                <rect x="55" y="28" width="190" height="118" rx="8" fill="#3b281a" stroke="rgba(255,255,255,.25)" />
+                <rect x="65" y="38" width="170" height="98" rx="3" fill="#ffffff" />
+                <rect x="80" y="62" width="140" height="44" rx="3" fill="#f7f4ed" stroke="#e0d6c4" />
+                <circle cx="95" cy="84" r="7" fill="#d9ccb8" />
+                <rect x="110" y="76" width="95" height="4" rx="2" fill="#d9ccb8" />
+                <rect x="110" y="86" width="70" height="4" rx="2" fill="#d9ccb8" />
+                <path d="M30 146 H270 L258 166 H42 Z" fill="#4a3020" stroke="rgba(255,255,255,.25)" />
+                <rect x="125" y="146" width="50" height="6" rx="3" fill="#2a1b11" />
+                <circle cx="245" cy="38" r="26" fill="#2a1b11" stroke="rgba(255,255,255,.35)" stroke-width="2" />
+                <rect x="233" y="38" width="24" height="18" rx="3" fill="#ffffff" />
+                <path d="M238 38 V32 a7 7 0 0 1 14 0 V38" fill="none" stroke="#ffffff" stroke-width="3.5" />
+                <circle cx="245" cy="47" r="2.5" fill="#2a1b11" />
+            </svg>
+
+            <div class="welcome-text">
+                <h2>Hi! Welcome Back</h2>
+                <p>Manage employee records and forms in one place.</p>
+            </div>
+
+            <p class="copyright">&copy; 2026 CSTA</p>
+        </section>
+
+        <!-- Right side: login card -->
+        <section class="right">
+            <div id="loginForm">
+                <form id="loginFrm">
+                    <h1 id="loginHeading">HRIS LOGIN</h1>
+
+                    <div class="input-group">
+                        <label for="Username" class="sr-only">Username</label>
+                        <input type="text" id="Username" name="AccountUsername" class="with-icon user-icon" required
+                            placeholder="Username" autocomplete="username">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password" class="sr-only">Password</label>
+                        <input type="password" id="password" name="Password" class="with-icon key-icon" required
+                            placeholder="Password" autocomplete="current-password">
+                    </div>
+
+                    <button id="loginButton" type="submit">Log In</button>
+                    <a href="#" id="forgotLink">Forgot Password?</a>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Custom Message Box Modal Overlay -->
+    <div id="customModal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <h3 id="modalTitle">Message</h3>
+            <p id="modalMessage">This is your message text.</p>
+            <div id="modalButtons" class="modal-buttons">
+                <button type="button" id="modalOkBtn">OK</button>
+                <button type="button" id="modalCancelBtn" style="display: none;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="HRIS.js"></script>
+</body>
+
+</html>

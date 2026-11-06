@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic / Admin Staff Portal</title>
+    <link rel="stylesheet" href="acadStaff.css">
+</head>
+
+<body>
+
+    <!-- Portal Top Banner Layout Header Section -->
+    <header id="headerForHomepage">
+        <img src="assets/cstaLogo1.png" alt="CSTA Logo" id="cstaLogo">
+        <h1 id="WelcomeTxt">Academic / Admin Portal</h1>
+    </header>
+
+    <!-- Master Structural Split Grid Container -->
+    <div class="main-container">
+
+        <!-- LEFT SIDEBAR: Persistent Interaction Control Module -->
+        <aside class="sidebar-buttons">
+            <button type="button" id="btnRequestCOE">Request COE</button>
+            <button type="button" id="btnRequestPayslip">Request Pay Slip</button>
+            <button type="button" id="btnManageAcademic">Manage Academic Staff</button>
+
+            <!-- Bottom Locked System Escape Node Anchor -->
+            <div class="logout">
+                <button type="button" id="btnHomeLogOut">Log Out</button>
+            </div>
+        </aside>
+
+        <!-- RIGHT OUTPUT CONTENT PANEL DISPLAY CONTAINER -->
+        <main class="output-container">
+
+            <!-- SCREEN 1: Default Central Greeting Screen Area -->
+            <section id="nodeStaffHome" class="interface-screen active-screen">
+                <h2>Academic Staff Home Page</h2>
+                <p class="form-description">Welcome back! Please select a function from the left options menu to begin.
+                </p>
+                <div id="waitForUser" style="color: #2563eb; font-weight: bold; margin-top: 20px;">
+                    System Standby: Awaiting Action...
+                </div>
+            </section>
+
+            <!-- SCREEN 2: COE REQUEST WORKFLOW CANVASES -->
+            <section id="nodeCOEForm" class="interface-screen hidden-screen">
+                <h2>COE Request Form</h2>
+                <p class="form-description">Please verify your details before submitting to human resources.</p>
+
+                <div class="form-fields" id="coeFormFields">
+                    <div class="input-row">
+                        <label for="coePurpose">Purpose of Request:</label>
+                        <input type="text" id="coePurpose" placeholder="e.g., Bank Loan, Visa Application...">
+                    </div>
+                </div>
+
+                <div class="toolbar-row">
+                    <button type="button" class="btn-action btn-secondary btn-back-home">Cancel</button>
+                    <button type="button" id="btnSubmitCOE" class="btn-action btn-success">Submit Request to HR
+                        Office</button>
+                </div>
+            </section>
+
+            <!-- SCREEN 3: PAYSLIP REQUEST WORKFLOW CANVASES -->
+            <section id="nodePayslipForm" class="interface-screen hidden-screen">
+                <h2>Pay Slip Request Form</h2>
+                <p class="form-description">Select the corresponding cutoff period to generate your request file ledger.
+                </p>
+
+                <div class="form-fields" id="payslipFields">
+                    <div class="input-row">
+                        <label for="payslipPeriod">Target Pay Period:</label>
+                        <select id="payslipPeriod">
+                            <option value="">-- Select Cutoff Period --</option>
+                            <option value="period1">October 1-15, 2026</option>
+                            <option value="period2">October 16-31, 2026</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="toolbar-row">
+                    <button type="button" class="btn-action btn-secondary btn-back-home">Cancel</button>
+                    <button type="button" id="btnSubmitPayslip" class="btn-action btn-success">Submit Request to
+                        HR</button>
+                </div>
+            </section>
+
+            <!-- SCREEN 4: ACADEMIC STAFF MANAGEMENT INTERFACE -->
+            <section id="nodeAcademicManagement" class="interface-screen hidden-screen">
+                <h2>Academic Staff Management Interface</h2>
+                <p class="instruction">Manage Academic Staff accounts, records, or configuration properties:</p>
+
+                <div class="toolbar-row">
+                    <button type="button" class="btn-action btn-secondary btn-back-home"
+                        id="backHomeForManageForm">Back</button>
+                    <button type="button" id="btnShowManagementView" class="btn-action btn-info">Show Academic
+                        Management Data</button>
+                </div>
+            </section>
+
+            <!-- SCREEN 5: LOCK STATE / PENDING TERMINATION ALERTS SCREEN -->
+            <section id="nodeWaitAdmin" class="interface-screen hidden-screen">
+                <div class="status-alert-card">
+                    <h2>Account Pending Verification</h2>
+                    <p id="lockStatusMessage">Wait for the HR admin to unlock account</p>
+                    <button type="button" class="btn-action btn-secondary btn-back-home">Return to Home</button>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+    <!-- Custom Message Box Modal Overlay -->
+    <div id="customModal" class="modal-overlay" style="display: none;">
+        <div class="modal-card">
+            <h3 id="modalTitle">Message</h3>
+            <p id="modalMessage">This is your message text.</p>
+            <div id="modalButtons" class="modal-buttons">
+                <button type="button" id="modalOkBtn">OK</button>
+                <button type="button" id="modalCancelBtn" style="display: none;">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- External Client Logic Controller Layer Link -->
+    <script src="acadStaff.js"></script>
+</body>
+
+</html>
